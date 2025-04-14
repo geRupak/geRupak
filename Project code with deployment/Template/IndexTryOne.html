@@ -1,0 +1,62 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Jun 22 23:51:29 2022
+
+@author: G. Rupak
+"""
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <style>
+        input[type = text], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type = submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type = submit]:hover{
+            background-color: #45a049;
+        }
+
+        div{
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+    </style>
+
+<h2>HTML Forms</h2>
+
+<form action="{{ url_for('predict')}}" method="POST">
+  <label for="From Date">From Date:</label><br>
+  <input type="date" class="form-control" id="fromdate" name="fromdate" value="0"><br>
+  <label for="To Date">To Date:</label><br>
+  <input input type="date" class="form-control" id="todate" name="todate" value="0"><br><br>
+  <input type="submit" class="btn-info" value="predict">
+</form> 
+
+
+</body>
+</html>
